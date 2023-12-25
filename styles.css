@@ -72,6 +72,11 @@ h2 {
   font-weight: 900;
 }
 
+p,
+h2 {
+  color: rgb(36 62 99 / var(--tw-text-opacity));
+}
+
 button {
   cursor: pointer;
   font-family: inherit;
@@ -80,6 +85,13 @@ button {
 
 button:hover {
   background-color: rgb(60 13 153 / var(--tw-bg-opacity));
+}
+
+.service__title,
+.user--name,
+.values__sub-descriptions--title,
+.testimonial__title {
+  color: rgb(36 62 99 / var(--tw-text-opacity));
 }
 
 /* Landing section */
@@ -605,6 +617,27 @@ input:hover {
   align-items: center;
 }
 
+.pricing__title {
+  margin-bottom: 1.2rem;
+}
+
+.pricing__para {
+  text-align: center;
+  margin-top: 1rem;
+  max-width: 36rem;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.625;
+  color: rgb(124 139 161 / var(--tw-text-opacity));
+}
+
+.pricing__subtitle {
+  margin: 0;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 0.025em;
+}
+
 .price--plans {
   position: relative;
   width: 100%;
@@ -890,6 +923,15 @@ input:hover {
   justify-content: space-between;
 }
 
+.testimonials__section--para {
+  font-size: 1.125rem;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  line-height: 1.625;
+  --tw-text-opacity: 1;
+  color: rgb(124 139 161 / var(--tw-text-opacity));
+}
+
 .testimonials__img--wrapper,
 .testimonials__descriptions--wrapper {
   width: 47%;
@@ -987,7 +1029,6 @@ button.right--arrow--wrapper {
 .user--name {
   font-size: 1.25rem;
   font-weight: 700;
-  color: rgb(36 62 99 / var(--tw-text-opacity));
   text-transform: none;
 }
 
@@ -1062,9 +1103,11 @@ button.right--arrow--wrapper {
 
 .faqs__para {
   width: 100%;
+  max-width: 36rem;
+  font-size: 1.125rem;
   text-align: center;
   color: rgb(124 139 161 / var(--tw-text-opacity));
-  margin-top: 16px;
+  margin-top: 1rem;
 }
 
 .faqs__accordion {
