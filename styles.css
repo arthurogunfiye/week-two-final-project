@@ -475,9 +475,8 @@ input:hover {
 
 .steps__svg {
   position: absolute;
-  right: 0px;
-  bottom: 0px;
-  left: 50%;
+  right: 15rem;
+  bottom: -5rem;
   height: 10rem;
   width: 10rem;
   --tw-translate-x: -50%;
