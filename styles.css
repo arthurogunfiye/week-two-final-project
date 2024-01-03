@@ -1134,7 +1134,7 @@ button.right--arrow--wrapper {
   user-select: none;
   border-radius: 0.5rem;
   background-color: rgb(237 242 247 / var(--tw-bg-opacity));
-  padding: 1.25rem 2rem;
+  padding: 1rem 2.5rem;
   color: rgb(45 55 72 / var(--tw-text-opacity));
   transition-property: background-color, border-color, color, fill, stroke,
     opacity, box-shadow, transform;
@@ -1172,6 +1172,7 @@ button.right--arrow--wrapper {
 .faq__term--wrapper[expanded="true"] + .faq__desription {
   opacity: 1;
   max-height: 9em;
+  margin-top: 1rem;
   transition: all 200ms linear;
   will-change: opacity, max-height;
 }
@@ -1182,6 +1183,8 @@ button.right--arrow--wrapper {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform;
   transition: opacity 200ms linear, max-height 200ms linear;
   will-change: opacity, max-height;
 }
