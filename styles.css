@@ -1047,6 +1047,11 @@ button.right--arrow--wrapper {
   color: #fabf2a;
 }
 
+.testimonial {
+  display: none;
+  margin-bottom: 2rem;
+}
+
 /* FAQS */
 
 .faqs__section--wrapper {
@@ -1453,7 +1458,7 @@ footer .divider {
 
 @keyframes slideFromLeftToRight {
   from {
-    transform: translateX(-100%);
+    transform: translateX(-130%);
   }
 
   to {
@@ -1472,7 +1477,7 @@ footer .divider {
 
 @keyframes slideFromRightToLeft {
   from {
-    transform: translateX(100%);
+    transform: translateX(130%);
   }
 
   to {
@@ -1485,6 +1490,7 @@ footer .divider {
 #pricing,
 #faqs,
 #footer,
+.testimonial,
 .animate-section {
   animation: slideFromRightToLeft 1.5s ease-in-out;
 }
