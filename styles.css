@@ -25,6 +25,7 @@
 
 html {
   line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -77,8 +78,14 @@ h2 {
   color: rgb(36 62 99 / var(--tw-text-opacity));
 }
 
-button {
+button,
+.faq__term--wrapper,
+.faq__svg,
+.socialLinks a {
   cursor: pointer;
+}
+
+button {
   font-family: inherit;
   font-size: 100%;
 }
@@ -1124,7 +1131,6 @@ button.right--arrow--wrapper {
 
 .faq {
   margin-top: 1.25rem;
-  cursor: pointer;
   user-select: none;
   border-radius: 0.5rem;
   background-color: rgb(237 242 247 / var(--tw-bg-opacity));
@@ -1154,20 +1160,30 @@ button.right--arrow--wrapper {
 .faq__svg {
   display: flex;
   margin-left: 0.5rem;
-  transition-property: background-color, border-color, color, fill, stroke,
-    opacity, box-shadow, transform;
-  transition-duration: 300ms;
+  transition-duration: all 300ms ease;
   height: 1.5rem;
   width: 1.5rem;
 }
 
+.faq__term--wrapper[expanded="true"] .faq__svg {
+  transform: rotateZ(180deg);
+}
+
+.faq__term--wrapper[expanded="true"] + .faq__desription {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+
 .faq__desription {
-  opacity: 0;
-  height: 0px;
-  margin-top: 0px;
   font-size: 1rem;
-  pointer-events: none;
   line-height: 1.625;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
 }
 
 /* Get Started */
@@ -1444,7 +1460,6 @@ footer .divider {
   width: auto;
   height: auto;
   margin-right: 1rem;
-  cursor: pointer;
   border-radius: 9999px;
   background-color: rgb(247 250 252 / var(--tw-bg-opacity));
   padding: 0.5rem;
@@ -1456,42 +1471,15 @@ footer .divider {
 
 /* Section animations */
 
-/* @keyframes slideFromLeftToRight {
-  from {
-    transform: translateX(-130%);
-  }
-
-  to {
-    transform: translateX(0);
-  }
-}
-
-.scrolled .slide-right {
-  animation: slideFromLeftToRight 1.5s ease-in-out;
-}
-
-@keyframes slideFromRightToLeft {
-  from {
-    transform: translateX(130%);
-  }
-
-  to {
-    transform: translateX(0);
-  }
-}
-
-.testimonial,
-.scrolled .slide-left {
-  animation: slideFromRightToLeft 1.5s ease-in-out;
-} */
-
 .scrolled.slide-left {
   animation: slide-in-left 1.5s ease-in-out;
 }
+
 .scrolled.slide-right,
 .testimonial {
   animation: slide-in-right 1.5s ease-in-out;
 }
+
 @keyframes slide-in-left {
   0% {
     transform: translateX(-130%);
@@ -1502,6 +1490,7 @@ footer .divider {
     opacity: 1;
   }
 }
+
 @keyframes slide-in-right {
   0% {
     transform: translateX(130%);

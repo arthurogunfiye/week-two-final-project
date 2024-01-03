@@ -1,13 +1,15 @@
-let acc = document.getElementsByClassName("faq__term--wrapper");
+const items = document.querySelectorAll(".faq__term--wrapper");
 
-for (let i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
-    acc[i].classList.toggle("active");
-    let panel = acc[i].nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel[i].scrollHeight + "px";
-    }
-  });
+function toggleAccordion() {
+  const itemToggle = this.getAttribute("expanded");
+
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute("expanded", "false");
+  }
+
+  if (itemToggle == "false") {
+    this.setAttribute("expanded", "true");
+  }
 }
+
+items.forEach(item => item.addEventListener("click", toggleAccordion));
