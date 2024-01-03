@@ -1,26 +1,24 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll(".animate-section");
+const scrollOffset = 60;
+const sections = document.querySelectorAll(".animate-section");
 
-  function isSectionInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
+const sectionInView = (section, offset = 0) => {
+  const sectionTop = section.getBoundingClientRect().top;
+  return (
+    sectionTop <=
+    (window.innerHeight || document.documentElement.clientHeight) - offset
+  );
+};
 
-  function handleScroll() {
-    sections.forEach((section) => {
-      if (isSectionInViewport(section)) {
-        section.classList.add("animate-section-visible");
-      }
-    });
-  }
+const handleScrollAnimation = () => {
+  sections.forEach(section => {
+    if (sectionInView(section, scrollOffset)) {
+      section.classList.add("scrolled");
+    } else {
+      section.classList.remove("scrolled");
+    }
+  });
+};
 
-  window.addEventListener("scroll", handleScroll);
-
-  handleScroll(); // Trigger initial check
+window.addEventListener("scroll", () => {
+  handleScrollAnimation();
 });

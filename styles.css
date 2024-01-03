@@ -1456,7 +1456,7 @@ footer .divider {
 
 /* Section animations */
 
-@keyframes slideFromLeftToRight {
+/* @keyframes slideFromLeftToRight {
   from {
     transform: translateX(-130%);
   }
@@ -1466,12 +1466,7 @@ footer .divider {
   }
 }
 
-#landing,
-#qualityWork,
-#values,
-#testimonials,
-#getStarted,
-.animate-section {
+.scrolled .slide-right {
   animation: slideFromLeftToRight 1.5s ease-in-out;
 }
 
@@ -1485,12 +1480,35 @@ footer .divider {
   }
 }
 
-#services,
-#steps,
-#pricing,
-#faqs,
-#footer,
 .testimonial,
-.animate-section {
+.scrolled .slide-left {
   animation: slideFromRightToLeft 1.5s ease-in-out;
+} */
+
+.scrolled.slide-left {
+  animation: slide-in-left 1.5s ease-in-out;
+}
+.scrolled.slide-right,
+.testimonial {
+  animation: slide-in-right 1.5s ease-in-out;
+}
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-130%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(130%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
