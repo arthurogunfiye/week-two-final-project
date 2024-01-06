@@ -101,6 +101,65 @@ button:hover {
   color: rgb(36 62 99 / var(--tw-text-opacity));
 }
 
+.btn__menu {
+  background-color: transparent;
+  font-size: 40px;
+  border: none;
+  color: #7342d6;
+  display: none;
+}
+
+.menu__backdrop {
+  position: absolute;
+  background-color: #242424;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  transition: all 300ms ease;
+  opacity: 0;
+  transform: translate(100%);
+}
+
+.menu--open {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.menu--open .menu__backdrop {
+  visibility: visible !important;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__list {
+  padding: 32px 0;
+}
+
+.menu__link {
+  color: white;
+  font-size: 20px;
+}
+
+.btn__menu--close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 8px;
+  color: white;
+}
+
 /* Landing section */
 
 nav {
@@ -1502,5 +1561,322 @@ footer .divider {
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+/*
+  MEDIA QUERIES
+*/
+
+@media (max-width: 853px) {
+  .nav__lists li:nth-child(1),
+  .nav__lists li:nth-child(2),
+  .nav__lists li:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  h2,
+  h5,
+  p,
+  .qualityWork__para,
+  .values__sub-descriptions--para {
+    text-align: center;
+  }
+
+  .values__sub-descriptions--para {
+    text-align: left;
+  }
+
+  .header__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  .header__description--wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    text-align: center;
+    max-width: none;
+    margin-bottom: 2rem;
+  }
+
+  .inputAndButton {
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+    max-width: 40rem;
+    text-align: center;
+    width: 70%;
+  }
+
+  .customers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .customers__logo {
+    padding: 0 4rem;
+  }
+
+  .service {
+    width: calc(100% / 2);
+  }
+
+  .services__svg {
+    right: 0;
+    bottom: -8rem;
+  }
+
+  .qualityWork__section--wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .qualityWork__description,
+  .qualityWork__img--wrapper {
+    margin: 0;
+    width: 80%;
+  }
+
+  .steps__section--wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .steps__images--wrapper,
+  .steps__descriptions--wrapper {
+    width: 80%;
+  }
+
+  .steps__descriptions--wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .steps__descriptions--step {
+    justify-content: center;
+  }
+
+  .steps__svg {
+    right: 13rem;
+  }
+
+  .values__section--wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .values__img--wrapper,
+  .values__descriptions--wrapper {
+    width: 80%;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .values__sub-descriptions--desc {
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    margin-left: 2rem;
+    align-items: flex-start;
+  }
+
+  .price--plans {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .price--plan {
+    margin-right: 0;
+  }
+
+  .testimonials__section--wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .testimonials__img--wrapper,
+  .testimonials__descriptions--wrapper {
+    width: 80%;
+  }
+
+  .faqs__accordion {
+    padding: 0 1rem;
+  }
+
+  .faqs__first--svg {
+    right: 0;
+  }
+
+  .faqs__second--svg {
+    left: -9rem;
+    bottom: -14rem;
+  }
+
+  #getStarted {
+    margin: 0 1rem;
+  }
+
+  .getStarted--description--wrapper {
+    flex-direction: column;
+  }
+
+  .getStarted--anchors {
+    justify-content: center;
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+
+  .footer__container {
+    padding: 3rem 1.5rem;
+  }
+
+  .footer__items {
+    padding: 0 1.5rem;
+  }
+
+  footer .divider {
+    margin: 2rem 0;
+  }
+
+  .footer__links h5 {
+    text-align: left;
+  }
+}
+
+@media (max-width: 586px) {
+  .btn__menu {
+    display: block;
+  }
+
+  .nav__link {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .btn {
+    position: static;
+    width: 100%;
+  }
+
+  .inputAndButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .customers__logo {
+    padding: 0 2rem;
+  }
+
+  .header__description--img--wrapper {
+    width: 80%;
+  }
+
+  .service {
+    width: 100%;
+  }
+
+  .qualityWork__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .steps__descriptions--wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .steps__descriptions--step {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  .steps__svg {
+    right: 5rem;
+  }
+
+  .values__descriptions--wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .values__sub-descriptions {
+    flex-direction: column;
+  }
+
+  .values__sub-descriptions--desc {
+    margin-right: 0;
+  }
+
+  .price--plan {
+    width: 90%;
+  }
+
+  .testimonials__descriptions--wrapper {
+    margin-bottom: 1.5rem;
+  }
+
+  .faq__term--wrapper[expanded="true"] + .faq__desription {
+    max-height: 12em;
+  }
+
+  .getStarted--anchors {
+    flex-direction: column;
+  }
+
+  .getStartedAnchor {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .anchor--wrapper {
+    text-align: center;
+  }
+
+  .footer__link--listItem {
+    display: none;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .copyrightAndSocialLinks {
+    flex-direction: column;
+  }
+
+  .footer__logo--wrapper,
+  .copyright {
+    margin-bottom: 1rem;
   }
 }
