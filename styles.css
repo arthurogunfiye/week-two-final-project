@@ -1046,6 +1046,7 @@ input:hover {
 .carousel__arrows {
   display: flex;
   margin-top: 0;
+  justify-content: center;
 }
 
 .divider {
@@ -1715,6 +1716,10 @@ footer .divider {
     width: 80%;
   }
 
+  .testimonials__carousel--wrapper {
+    margin-bottom: 2rem;
+  }
+
   .faqs__accordion {
     padding: 0 1rem;
   }
@@ -1869,7 +1874,7 @@ footer .divider {
   }
 
   .faq__term--wrapper[expanded="true"] + .faq__desription {
-    max-height: 12em;
+    max-height: 18em;
   }
 
   .getStarted--anchors {
