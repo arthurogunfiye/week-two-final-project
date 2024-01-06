@@ -1759,6 +1759,24 @@ footer .divider {
   }
 }
 
+@media (max-width: 700px) {
+  .inputAndButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .inputAndButton input,
+  .btn {
+    width: 50%;
+  }
+
+  .btn {
+    position: static;
+  }
+}
+
 @media (max-width: 586px) {
   .btn__menu {
     display: block;
@@ -1778,16 +1796,20 @@ footer .divider {
     text-align: center;
   }
 
-  .btn {
-    position: static;
-    width: 100%;
-  }
-
   .inputAndButton {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+  }
+
+  .inputAndButton input,
+  .btn {
+    width: 100%;
+  }
+
+  .btn {
+    position: static;
   }
 
   .customers__logo {
@@ -1863,8 +1885,22 @@ footer .divider {
     text-align: center;
   }
 
-  .footer__link--listItem {
-    display: none;
+  .footer__links--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer__links--wrapper h5 {
+    text-align: center;
+  }
+
+  .footer__links {
+    margin-top: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .divider {
