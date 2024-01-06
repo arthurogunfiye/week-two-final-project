@@ -1642,12 +1642,19 @@ footer .divider {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   .qualityWork__description,
   .qualityWork__img--wrapper {
-    margin: 0;
     width: 80%;
+  }
+
+  .qualityWork__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
   }
 
   .steps__section--wrapper {
