@@ -1965,9 +1965,9 @@ footer .divider {
   }
 
   .steps__svg {
-    width: 140px;
-    height: 140px;
-    right: 4.5rem;
+    width: 130px;
+    height: 130px;
+    right: 4rem;
   }
 
   .values__descriptions--wrapper {
@@ -1989,8 +1989,7 @@ footer .divider {
   }
 
   .price--plan--action button {
-    width: 100%;
-    height: auto;
+    font-size: 13px;
   }
 
   .testimonials__descriptions--wrapper {
