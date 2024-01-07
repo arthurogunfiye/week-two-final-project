@@ -1648,6 +1648,23 @@ footer .divider {
   .header__description--img--wrapper {
     justify-content: flex-end;
   }
+
+  .services__svg {
+    right: -5rem;
+  }
+
+  .steps__svg {
+    right: 12rem;
+  }
+
+  .faqs__first--svg {
+    right: 0;
+  }
+
+  .faqs__second--svg {
+    left: -10rem;
+    bottom: -14rem;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1948,7 +1965,7 @@ footer .divider {
   }
 
   .steps__svg {
-    right: 5rem;
+    right: 4rem;
   }
 
   .values__descriptions--wrapper {
@@ -1969,6 +1986,10 @@ footer .divider {
     width: 90%;
   }
 
+  .price--plan--action button {
+    height: auto;
+  }
+
   .testimonials__descriptions--wrapper {
     margin-bottom: 1.5rem;
   }
@@ -1984,6 +2005,10 @@ footer .divider {
   .getStartedAnchor {
     margin-right: 0;
     margin-bottom: 1rem;
+  }
+
+  .getStarted--description {
+    font-size: 1.6rem;
   }
 
   .anchor--wrapper {
