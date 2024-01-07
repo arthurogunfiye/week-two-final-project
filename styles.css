@@ -1593,6 +1593,11 @@ footer .divider {
 */
 
 @media (max-width: 1200px) {
+  section,
+  footer {
+    padding: 0 2rem;
+  }
+
   .header__description {
     flex-direction: row;
     align-items: center;
@@ -1600,7 +1605,7 @@ footer .divider {
   }
 
   .header__description--wrapper {
-    width: 41.6667%;
+    width: 42%;
     max-width: none;
     text-align: left;
   }
