@@ -38,7 +38,7 @@ body {
 
 .row {
   width: 100%;
-  max-width: 1024px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -160,6 +160,10 @@ button:hover {
   color: white;
 }
 
+#secondInputField {
+  display: none;
+}
+
 /* Landing section */
 
 nav {
@@ -234,6 +238,25 @@ nav {
 
 .purple {
   color: rgb(100 21 255 / var(--tw-text-opacity));
+}
+
+#header {
+  position: relative;
+}
+
+.header__svg {
+  position: absolute;
+  pointer-events: none;
+  left: -120px;
+  bottom: 0px;
+  z-index: -10;
+  height: 16rem;
+  width: 16rem;
+  --tw-translate-x: -66.67%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  opacity: 0.05;
 }
 
 .header__description {
@@ -1569,11 +1592,97 @@ footer .divider {
   MEDIA QUERIES
 */
 
-@media (max-width: 853px) {
+@media (max-width: 1200px) {
+  .header__description {
+    flex-direction: row;
+    align-items: center;
+    padding: 6rem 2rem;
+  }
+
+  .header__description--wrapper {
+    width: 41.6667%;
+    max-width: none;
+    text-align: left;
+  }
+
+  .header__description--img--wrapper {
+    margin-top: 0px;
+    align-self: flex-end;
+  }
+
+  .header__img--wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .header__description--img {
+    width: 100%;
+    min-width: 0px;
+    max-width: 32rem;
+  }
+
+  .header__title {
+    font-size: 2.25rem;
+  }
+
+  .header__para {
+    font-size: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .inputAndButton {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .customers {
+    margin-top: 5rem;
+  }
+
+  .header__description--img--wrapper {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 992px) {
   .nav__lists li:nth-child(1),
   .nav__lists li:nth-child(2),
   .nav__lists li:nth-child(3) {
     display: none;
+  }
+
+  .header__description--img {
+    width: 100%;
+    min-width: 0px;
+    max-width: 28rem;
+  }
+
+  .inputAndButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .inputAndButton input,
+  .btn {
+    width: 80%;
+  }
+
+  .btn {
+    position: static;
+  }
+
+  .customers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .customers__logo {
+    padding: 0 4rem;
   }
 }
 
@@ -1616,17 +1725,6 @@ footer .divider {
     max-width: 40rem;
     text-align: center;
     width: 70%;
-  }
-
-  .customers {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
-  }
-
-  .customers__logo {
-    padding: 0 4rem;
   }
 
   .service {
@@ -1771,24 +1869,6 @@ footer .divider {
   }
 }
 
-@media (max-width: 700px) {
-  .inputAndButton {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .inputAndButton input,
-  .btn {
-    width: 50%;
-  }
-
-  .btn {
-    position: static;
-  }
-}
-
 @media (max-width: 586px) {
   .btn__menu {
     display: block;
@@ -1818,6 +1898,14 @@ footer .divider {
   .inputAndButton input,
   .btn {
     width: 100%;
+  }
+
+  #firstInputField {
+    display: none;
+  }
+
+  #secondInputField {
+    display: inline-block;
   }
 
   .btn {
